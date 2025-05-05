@@ -3,8 +3,11 @@ import Link from 'next/link'
 import { Title, MenuList } from '@/lib/constants'
 import { Fragment } from 'react'
 import { Separator } from '@/components/ui/separator'
+import { useCartStore } from '@/store'
 
 export default function Header() {
+  const { cartList } = useCartStore()
+
 	return (
 		<div className='h-16 px-10 border-b bg-white'>
 			<div className='container flex items-center justify-between h-full'>
@@ -18,7 +21,7 @@ export default function Header() {
 							<Link href={item.href}>{item.text}</Link>
 						</Fragment>
 					))}
-					{/* { cartList.length ? '（' + cartList.length + '）' : '' } */}
+					{ cartList.length ? '（' + cartList.length + '）' : '' }
 				</div>
 			</div>
 		</div>
