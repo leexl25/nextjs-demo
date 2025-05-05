@@ -1,7 +1,6 @@
 'use server'
 
 import db from "@/lib/db"
-import { Address } from "@/types/global"
 import { revalidatePath } from "next/cache"
 
 export async function addAddressAction(name: string, city: string, address: string, phone: string, userid: number) {
