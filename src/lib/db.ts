@@ -1,5 +1,5 @@
-// import { neon } from "@neondatabase/serverless";
+import { neon } from "@neondatabase/serverless";
 
-// const db = neon(`${process.env.DATABASE_URL}`)
+const db = neon(`${process.env.DATABASE_URL}`)
 
-// export default db
+export default db

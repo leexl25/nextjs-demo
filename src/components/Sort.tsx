@@ -4,11 +4,12 @@ import { SortList, SortTitle } from '@/lib/constants'
 import React from 'react'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { SortValue } from '@/types/global'
+import { useSortStore } from '@/store'
 
 export default function Sort() {
+	const { setValue } = useSortStore()
 	const handleValueChange = (value: SortValue) => {
-		// setValue(value)
-    console.log(value);
+		setValue(value)
     
 	}
 	return (
